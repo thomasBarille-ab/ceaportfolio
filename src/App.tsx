@@ -49,11 +49,9 @@ export default function App() {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
-        e.preventDefault()
-        next()
+        e.preventDefault(); next()
       } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        e.preventDefault()
-        prev()
+        e.preventDefault(); prev()
       }
     }
     window.addEventListener('keydown', handler)
@@ -63,15 +61,14 @@ export default function App() {
   const SlideComponent = SLIDES[current]
 
   return (
-    <div style={{ width: '100vw', height: '100vh', overflow: 'hidden', position: 'relative', background: '#0a0f1e' }}>
+    <div className="w-screen h-screen flex flex-col overflow-hidden" style={{ background: '#0a0f1e' }}>
       <div
         key={animKey}
         className={direction === 'next' ? 'slide-enter' : 'slide-enter-prev'}
-        style={{ width: '100%', height: 'calc(100% - 56px)' }}
+        style={{ flex: 1, minHeight: 0 }}
       >
         <SlideComponent />
       </div>
-
       <Navigation
         current={current}
         total={SLIDES.length}

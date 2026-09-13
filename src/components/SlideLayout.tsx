@@ -12,20 +12,26 @@ export default function SlideLayout({ children, accent = '#3b82f6', className = 
       className={`relative w-full h-full flex flex-col grid-circuit overflow-hidden ${className}`}
       style={{ background: '#0a0f1e' }}
     >
-      {/* Top accent bar */}
-      <div className="absolute top-0 left-0 right-0 h-1" style={{ background: accent }} />
-
-      {/* Corner glow */}
+      <div className="absolute top-0 inset-x-0 h-0.5 z-20" style={{ background: accent }} />
       <div
-        className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none"
-        style={{ background: accent, transform: 'translate(30%, -30%)' }}
+        className="absolute top-0 right-0 rounded-full pointer-events-none"
+        style={{
+          width: 480, height: 480,
+          background: accent, opacity: 0.07,
+          filter: 'blur(80px)',
+          transform: 'translate(40%,-40%)',
+        }}
       />
       <div
-        className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-8 blur-3xl pointer-events-none"
-        style={{ background: accent, transform: 'translate(-30%, 30%)' }}
+        className="absolute bottom-0 left-0 rounded-full pointer-events-none"
+        style={{
+          width: 360, height: 360,
+          background: accent, opacity: 0.05,
+          filter: 'blur(80px)',
+          transform: 'translate(-40%,40%)',
+        }}
       />
-
-      <div className="relative z-10 flex flex-col h-full px-16 py-12">
+      <div className="relative z-10 flex-1 min-h-0 flex flex-col px-12 py-7">
         {children}
       </div>
     </div>
