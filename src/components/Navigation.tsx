@@ -36,13 +36,18 @@ export default function Navigation({ current, total, onPrev, onNext, onGoto }: P
               key={i}
               onClick={() => onGoto(i)}
               title={proj?.label}
-              className="rounded-full transition-all duration-200 cursor-pointer"
-              style={{
-                width: active ? 18 : 6,
-                height: 6,
-                background: active ? color : 'rgba(255,255,255,0.18)',
-              }}
-            />
+              className="flex items-center justify-center cursor-pointer transition-all duration-200"
+              style={{ padding: '8px 4px' }}
+            >
+              <span
+                className="rounded-full transition-all duration-200 block"
+                style={{
+                  width: active ? 18 : 6,
+                  height: 6,
+                  background: active ? color : 'rgba(255,255,255,0.18)',
+                }}
+              />
+            </button>
           )
         })}
       </div>
