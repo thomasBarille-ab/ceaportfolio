@@ -10,7 +10,7 @@ export default function SlideLayout({ children, accent = '#3b82f6', className = 
   return (
     <div
       className={`relative w-full h-full flex flex-col grid-circuit overflow-hidden ${className}`}
-      style={{ background: '#0a0f1e' }}
+      style={{ background: '#12100e' }}
     >
       <div className="absolute top-0 inset-x-0 h-0.5 z-20" style={{ background: accent }} />
       <div

@@ -61,7 +61,7 @@ export default function App() {
   const SlideComponent = SLIDES[current]
 
   return (
-    <div className="w-screen h-screen flex flex-col overflow-hidden" style={{ background: '#0a0f1e' }}>
+    <div className="w-screen h-screen flex flex-col overflow-hidden" style={{ background: '#12100e' }}>
       <div
         key={animKey}
         className={direction === 'next' ? 'slide-enter' : 'slide-enter-prev'}

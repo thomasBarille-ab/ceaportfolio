@@ -16,15 +16,15 @@ const roadmap = [
 
 export default function MSPRTechSlide() {
   return (
-    <SlideLayout accent="#8b5cf6">
+    <SlideLayout accent="#e879f9">
       {/* Header */}
       <div className="shrink-0 mb-5">
         <div className="flex items-center gap-3 mb-2">
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-500/15 text-purple-400 border border-purple-500/30">Projet 3 / 3</span>
-          <span className="text-slate-500 text-sm">Stratégie SI & Analyse des risques</span>
+          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-fuchsia-500/15 text-fuchsia-400 border border-fuchsia-500/30">Projet 3 / 3</span>
+          <span className="text-stone-500 text-sm">Stratégie SI & Analyse des risques</span>
         </div>
         <h2 className="text-3xl font-bold text-white">MSPR — Stratégie & Analyses</h2>
-        <p className="text-slate-400 text-sm mt-1">Plan de transformation du SI sur 3 à 5 ans</p>
+        <p className="text-stone-400 text-sm mt-1">Plan de transformation du SI sur 3 à 5 ans</p>
       </div>
 
       {/* Body */}
@@ -32,13 +32,13 @@ export default function MSPRTechSlide() {
 
         {/* Left: objectives */}
         <div className="w-48 shrink-0 flex flex-col gap-2">
-          <p className="text-xs text-slate-500 uppercase tracking-wider shrink-0 mb-1">5 objectifs stratégiques</p>
+          <p className="text-xs text-stone-500 uppercase tracking-wider shrink-0 mb-1">5 objectifs stratégiques</p>
           {objectives.map(o => (
-            <div key={o.label} className="shrink-0 bg-white/5 border border-purple-500/20 rounded-xl flex gap-2.5 items-start px-3 py-2">
+            <div key={o.label} className="shrink-0 bg-white/5 border border-fuchsia-500/20 rounded-xl flex gap-2.5 items-start px-3 py-2">
               <span className="text-sm shrink-0">{o.icon}</span>
               <div>
                 <p className="text-white text-xs font-medium">{o.label}</p>
-                <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">{o.desc}</p>
+                <p className="text-stone-400 text-xs mt-0.5 leading-relaxed">{o.desc}</p>
               </div>
             </div>
           ))}
@@ -46,9 +46,9 @@ export default function MSPRTechSlide() {
 
         {/* Middle: SWOT image + roadmap */}
         <div className="flex-1 min-h-0 flex flex-col gap-3">
-          <div className="flex-1 min-h-0 bg-white/5 border border-purple-500/25 rounded-2xl overflow-hidden flex flex-col">
+          <div className="flex-1 min-h-0 bg-white/5 border border-fuchsia-500/25 rounded-2xl overflow-hidden flex flex-col">
             <div className="shrink-0 px-4 pt-3 pb-2">
-              <span className="text-xs text-purple-400 font-semibold uppercase tracking-wider">Analyse SWOT — K-Electronik</span>
+              <span className="text-xs text-fuchsia-400 font-semibold uppercase tracking-wider">Analyse SWOT — K-Electronik</span>
             </div>
             <div className="flex-1 min-h-0 overflow-hidden bg-white">
               <img src="/images/p40_img01.png" alt="SWOT" className="w-full h-full object-contain" />
@@ -56,12 +56,12 @@ export default function MSPRTechSlide() {
           </div>
           <div className="shrink-0 flex gap-2">
             {roadmap.map(({ year, items }) => (
-              <div key={year} className="flex-1 bg-white/5 border border-purple-500/20 rounded-xl p-2.5">
-                <p className="text-purple-400 text-xs font-semibold mb-1">{year}</p>
+              <div key={year} className="flex-1 bg-white/5 border border-fuchsia-500/20 rounded-xl p-2.5">
+                <p className="text-fuchsia-400 text-xs font-semibold mb-1">{year}</p>
                 <div className="space-y-0.5">
                   {items.map(i => (
-                    <div key={i} className="flex items-center gap-1 text-xs text-slate-300">
-                      <span className="w-1 h-1 rounded-full bg-purple-400 shrink-0" /> {i}
+                    <div key={i} className="flex items-center gap-1 text-xs text-stone-300">
+                      <span className="w-1 h-1 rounded-full bg-fuchsia-400 shrink-0" /> {i}
                     </div>
                   ))}
                 </div>
@@ -72,20 +72,20 @@ export default function MSPRTechSlide() {
 
         {/* Right: Risk matrix */}
         <div className="flex-1 min-h-0 flex flex-col gap-3">
-          <div className="flex-1 min-h-0 bg-white/5 border border-purple-500/25 rounded-2xl overflow-hidden flex flex-col">
+          <div className="flex-1 min-h-0 bg-white/5 border border-fuchsia-500/25 rounded-2xl overflow-hidden flex flex-col">
             <div className="shrink-0 px-4 pt-3 pb-2">
-              <span className="text-xs text-purple-400 font-semibold uppercase tracking-wider">Matrice des risques EBIOS</span>
-              <p className="text-xs text-slate-500 mt-0.5">R1: Ransomware · R2: Fuite données · R3: Panne ERP</p>
+              <span className="text-xs text-fuchsia-400 font-semibold uppercase tracking-wider">Matrice des risques EBIOS</span>
+              <p className="text-xs text-stone-500 mt-0.5">R1: Ransomware · R2: Fuite données · R3: Panne ERP</p>
             </div>
             <div className="flex-1 min-h-0 overflow-hidden bg-white flex items-center justify-center">
               <img src="/images/p44_img01.png" alt="Matrice EBIOS" className="w-full h-full object-contain" />
             </div>
           </div>
-          <div className="shrink-0 bg-white/5 border border-purple-500/25 rounded-2xl px-4 py-2.5">
+          <div className="shrink-0 bg-white/5 border border-fuchsia-500/25 rounded-2xl px-4 py-2.5">
             <div className="grid grid-cols-3 gap-2 text-center text-xs">
-              <div><p className="text-red-400 font-bold">Critique</p><p className="text-slate-500 mt-0.5">Ransomware</p></div>
-              <div><p className="text-amber-400 font-bold">Élevé</p><p className="text-slate-500 mt-0.5">Fuite données</p></div>
-              <div><p className="text-green-400 font-bold">Modéré</p><p className="text-slate-500 mt-0.5">Panne ERP</p></div>
+              <div><p className="text-red-400 font-bold">Critique</p><p className="text-stone-500 mt-0.5">Ransomware</p></div>
+              <div><p className="text-amber-400 font-bold">Élevé</p><p className="text-stone-500 mt-0.5">Fuite données</p></div>
+              <div><p className="text-emerald-400 font-bold">Modéré</p><p className="text-stone-500 mt-0.5">Panne ERP</p></div>
             </div>
           </div>
         </div>
